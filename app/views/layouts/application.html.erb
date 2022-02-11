@@ -37,12 +37,12 @@
 
             <li>
               <a class="fas fa-users nav-link text-light">
-               Users</a>
+               <%= link_to "Users",user_path(current_user.id)%></a>
             </li>
 
             <li>
               <a class="fas fa-book-open nav-link text-light">
-               Books</a>
+               <%= link_to "Books", books_path %></a>
             </li>
 
             <li>
