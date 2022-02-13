@@ -41,6 +41,9 @@
                     
                     <td><%= book.body %></td>
                   </tr>
+                         <% if @book.user == current_user %>
+        <%= link_to "Destroy", book_path(@book), class: "btn btn-sm btn-danger", method: :delete %>
+       <% end %>
                 <% end %>
               </tbody>
             </table>
