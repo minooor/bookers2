@@ -1,1 +1,47 @@
-book edit
+<html>
+  <main>
+    <%= form_with model: @book, local:true do |f| %>
+    <p id="notice"></p>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
+          <h1>Editing Book</h1>
+          
+          <form action="/books/44893" accept-charset="UTF-8" method="post">
+          
+           <div class="form-group">
+             <label for="book_title">Title</label>
+              <p><%= f.text_field :title %></p>
+           </div>
+          
+           <div class="form-group">
+             <label for="book_opinion">Opinion</label>
+             <p><%= f.text_area :body %></p>
+           </div>
+          
+           <div class="form-group">
+          
+             <%= f.submit "Update Book" %>
+             
+             <div>
+              <td>
+                <tr>
+                 <%= link_to "Show", book_path(@book.id) %>
+                </tr>
+                  |
+                <tr>
+                 <%= link_to "Back",book_path(@book) %>
+                </tr>
+              </td>
+             </div>
+             
+             
+           </div>
+          </form>
+        </dev>
+      </div>
+    </div>
+    <% end %>
+  </main>
+
+
