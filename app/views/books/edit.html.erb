@@ -6,23 +6,23 @@
       <div class="row">
         <div class="col-sm-12 col-md-8 col-lg-5 px-5 px-sm-0 mx-auto">
           <h1>Editing Book</h1>
-          
+
           <form action="/books/44893" accept-charset="UTF-8" method="post">
-          
+
            <div class="form-group">
              <label for="book_title">Title</label>
               <p><%= f.text_field :title %></p>
            </div>
-          
+
            <div class="form-group">
              <label for="book_opinion">Opinion</label>
              <p><%= f.text_area :body %></p>
            </div>
-          
+
            <div class="form-group">
-          
+
              <%= f.submit "Update Book" %>
-             
+
              <div>
               <td>
                 <tr>
@@ -34,8 +34,8 @@
                 </tr>
               </td>
              </div>
-             
-             
+
+
            </div>
           </form>
         </dev>

@@ -21,13 +21,13 @@
                       <%= image_tag book.user.get_profile_image(63,63) %>
                      <% end %>
                      </td>
-                    
+
                     <td>
                        <%= link_to book_path(book.id) do %>
                          <%= book.title %>
                        <% end %>
                      </td>
-                    
+
                     <td><%= book.body %></td>
                   </tr>
                 <% end %>
@@ -35,8 +35,3 @@
             </table>
           </div>
 
-        </div>
-      </div>
-
-    </main>
-  </body>
