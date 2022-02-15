@@ -4,36 +4,34 @@
       <div class="container px-5 px-sm-0">
         <div class="row">
           <div class="col-md-3">
-            <h2>User info</h2>
+            <%= form_with model: user, local:true do |f| %>
+             <h2>User info</h2>
 
-            <p>
-             <% if current_user.image.attached? %>
-             <%= image_tag current_user.image, size: "63x63" %>
-             <% else %>
-             <%= image_tag 'no_image', size: "63x63" %>
-             <% end %>
-             </p>
+             <p>
+              <%= image_tag user.get_profile_image(63,63) %>
+              </p>
 
-            <table class="table">
-              <tbody>
-                <tr></tr>
-                <tr>
-                  <th>name</th>
-                  <th><%= current_user.name %></th>
-                </tr>
+             <table class="table">
+               <tbody>
+                 <tr></tr>
+                 <tr>
+                   <th>name</th>
+                   <th><%= user.name %></th>
+                 </tr>
 
-                <tr>
-                  <th>introduction</th>
-                  <th><%= current_user.introduction %></th>
-                </tr>
-              </tbody>
-            </table>
+                 <tr>
+                   <th>introduction</th>
+                   <th><%= user.introduction %></th>
+                 </tr>
+               </tbody>
+             </table>
 
-            <div class="row">
-              <%= link_to  edit_user_path(current_user),class: "btn btn-outline-secondary btn-block" do %>
-                <i class="fas fa-user-cog"></i>
-              <% end %>
-            </div>
+             <div class="row">
+               <%= link_to  edit_user_path(current_user),class: "btn btn-outline-secondary btn-block" do %>
+                 <i class="fas fa-user-cog"></i>
+               <% end %>
+             </div>
+            <% end %>
 
             <%= form_with model: book, local:true do |f| %>
 
